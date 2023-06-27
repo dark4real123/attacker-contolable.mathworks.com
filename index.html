@@ -1,0 +1,273 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MathWorks Account Sign In</title>
+<link rel="icon"
+	href="https://www.mathworks.com/etc.clientlibs/mathworks/clientlibs/customer-ui/templates/common/resources/images/favicon.20220131131838624.ico"
+	type="image/x-icon" />
+<link href="/embedded-login/css/bootstrap.min.css?id=202305111436" rel="stylesheet" type="text/css">
+
+<link href="/embedded-login/css/mw_font.css?202305111436" rel="stylesheet" type="text/css">
+<link href="/embedded-login/css/getml-login.css?202305111436" rel="stylesheet" type="text/css">
+
+<link href="/embedded-login/css/getml-fonts/roboto-latin-italic-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+<link href="/embedded-login/css/getml-fonts/roboto-latin-italic-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+<link href="/embedded-login/css/getml-fonts/roboto-latin-italic-700.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+<link href="/embedded-login/css/getml-fonts/roboto-latin-normal-400.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+<link href="/embedded-login/css/getml-fonts/roboto-latin-normal-500.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+<link href="/embedded-login/css/getml-fonts/roboto-latin-normal-700.woff2" rel="preload" as="font" type="font/woff2" crossorigin>
+<link href="/embedded-login/css/getml-fonts/mathworks.woff"	rel="preload" as="font" type="font/woff" crossorigin>
+<link href="/embedded-login/css/getml-signin.css?202305111436" rel="stylesheet" type="text/css">
+<link href="/embedded-login/css/webwidgets.min.css?202305111436" rel="stylesheet" type="text/css">
+
+<script src="/embedded-login/js/frameworks/jquery.min.js?id=202305111436"></script>
+<script	src="/embedded-login/js/bootstrap.bundle.min.js?id=202305111436"></script>
+
+<script src="/embedded-login/js/v2/el-config.js?id=202305111436"></script>
+<script src="/embedded-login/js/embedded.js?id=202305111436"></script>
+<script src="/embedded-login/js/embedded-security.js?id=202305111436"></script>
+<script src="/embedded-login/js/signin.js?id=202305111436"></script>
+<script src="/embedded-login/js/el-common.js?id=202305111436"></script>
+
+<script src="/embedded-login/js/webwidgets.min.js"></script>
+	<script src="//assets.adobedtm.com/d0cc0600946eb3957f703b9fe43c3590597a8c2c/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js" async></script>
+<script type="text/javascript">
+	var mathworksurl = "https://www.mathworks.com";
+	var buildid = "202305111436";
+	var userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0";
+	var domain = "en";
+	var mwa_dc_identifier = "";
+	var cid = "mlhome";
+	var wid = "";
+	var redirectUrl = "https%3A%2F%2Finteg-matlab.mathworks.com%2F";
+	
+	$(document).ready(function() {
+		EmbeddedCommon.onloadEvents();
+		if(mwa_dc_identifier){
+			EmbeddedCommon.pageLoadOnForgotPassword(mwa_dc_identifier);
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="content_container">
+	<main>
+	  <div class="mwa_container">
+		<div class="mwa_content">
+		  <div class="container">
+		     <div class="row">
+			   <div class="col-12">
+				<!-- email form part -->
+				<div class="form_container" id="loginForm">
+					<form id="loginForm_email" action="/" novalidate
+						aria-describedby="emailLabel" autocomplete="off">
+						<div class="form_header">
+							<img
+								src="/embedded-login/images/pic-header-mathworks-logo.svg"
+								class="mw_logo" alt="MathWorks" width="167" height="34">
+						</div>
+						<div class="form_body">
+							<h1 id="signInLabel"></h1>
+							<div id="errorEmail"
+								class="alert alert-danger d-none add_margin_10 alertDiv"
+								aria-label="error" role="alert">
+								<span class="alert_icon icon-alert-error"></span>
+								<p id="errorMessageEmail"></p>
+
+							</div>
+							<div class="form-group">
+								<label for="email" class="form-label visually-hidden"></label>
+								<input type="email" class="form-control" id="email"
+									name="email" placeholder="Email" spellcheck="false"
+									required>
+							</div>
+							<p class="text-left small" id="privacyPolicyBlock">
+							</p>
+						</div>
+						<div class="form_footer">
+							<div class="d-flex align-items-center justify-content-end">
+								<p class="mb-0 me-auto"><a href="https://www.mathworks.com/mwaccount/account/create?cid=mlhome&wid=&uri=https%3A%2F%2Finteg-matlab.mathworks.com%2F"
+										 value="mwa_create" id="createAccount"></a>
+								</p>
+								<button class="btn btn_color_blue" name="submit"
+									value="submit" id="submit_identifier"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--  end form part -->
+
+				<div class="form_container" id="loginPassword">
+					<form id="loginForm_password" action="/" novalidate
+						aria-describedby="passwordLabel" autocomplete="off">
+						<div class="form_header mb-1">
+							<img
+								src="/embedded-login/images/pic-header-mathworks-logo.svg"
+								class="mw_logo" alt="MathWorks"  width="167" height="34">
+						</div>
+						<div class="form_body">
+							<p class="login_back">
+								<a class="changeEmail" href="#"><span
+									class="login_back_icon icon-arrow-back"></span> <span
+									class="user_email"></span></a>
+							</p>
+							<div id="error"
+								class="alert alert-danger d-none add_margin_10 alertDiv"
+								aria-label="error">
+								<span class="alert_icon icon-alert-error"></span>
+								<p id="errorMessage"></p>
+							</div>
+							<h1 id="passwordLabel"></h1>
+							<div class="form-group">
+								<div class="password_container">
+									<label for="password" class="form-label visually-hidden"></label>
+									<input data-validation="password_strength"
+										autocomplete="off" class="form-control has_error"
+										data-toggle="password" type="password" name="password"
+										id="password" placeholder="Password"> 
+								</div>
+							</div>
+							<div class="form-group">
+								<div id="rememberMeBlock" class="form-check"></div>
+							</div>
+						</div>
+						<div class="form_footer">
+							<div class="d-flex align-items-center justify-content-end">
+								<p class="mb-0 me-auto">
+									<a href="#" id="forgotpw"></a>
+								</p>
+								<button class="btn btn_color_blue" id="submit_password"
+									name="submit" value="submit"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<!-- 2sv verify form part -->
+				<div class="form_container" id="verify">
+					<form id="loginForm_verify" action="/" novalidate
+						aria-describedby="verificationCode" autocomplete="off">
+						<div class="form_header mb-1">
+							<img src="/embedded-login/images/pic-header-mathworks-logo.svg"
+								class="mw_logo" alt="MathWorks" width="167"
+								height="34">
+						</div>
+						<div class="form_body">
+							<div id="mfaError"
+								class="alert alert-danger d-none add_margin_10 alertDiv"
+								aria-label="error">
+								<span class="alert_icon icon-alert-error"></span>
+								<p id="mfaErrorMessage"></p>
+							</div>
+							<div id="codeSentAlert"
+								class="alert alert-info add_margin_10 d-none alertDiv">
+								<span class="alert_icon icon-alert-info-reverse"></span>
+								<p id="mfaInfoMessage"></p>
+							</div>
+							<h1 id="verifyCode">Verify Code</h1>
+							<p id="mfaMessage" class="add_margin_10"></p>
+							<div class="form-group">
+								<input type="text" pattern="[0-9]*" name="verification_code"
+									value="" maxlength="6" class="form-control"
+									id="verification_code"
+									aria-describedby="mfaInfoMessage mfaMessage">
+							</div>
+							<div class="form-group">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox"
+										id="requireCodes" name="require_codes"> <label
+										class="form-check-label" id="trustLabel"></label>
+								</div>
+							</div>
+						</div>
+						<div class="form_footer">
+							<div class="d-flex align-items-center justify-content-end">
+								<p class="mb-0 me-auto">
+									<a href="#" id="resendCode"></a></p>
+									<button class="btn btn_color_blue" name="codeVerification"
+										data-style="zoom-in" id="codeVerification"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--  end 2sv verify form part -->
+
+				<!--  Start Reset form part -->
+				<div class="form_container" id="resetPassword">
+					<form id="loginForm_resetPassword" action="/" novalidate
+						aria-describedby="resetPassword" autocomplete="off">
+						<div class="form_header mb-1">
+							<img
+								src="/embedded-login/images/pic-header-mathworks-logo.svg"
+								class="mw_logo" alt="MathWorks" width="167"
+								height="34">
+						</div>
+						<div class="form_body">
+							<div id="resetError"
+								class="alert alert-danger d-none add_margin_10 alertDiv"
+								aria-label="error">
+								<span class="alert_icon icon-alert-error"></span>
+								<p id="resetErrorMessage"></p>
+							</div>
+						</div>
+
+						<div class="form_footer">
+							<div class="d-flex align-items-center justify-content-end">
+								<button class="btn btn_color_blue" id="reset_password"
+									name="submit" value="submit"></button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--  End Reset form part -->
+
+				<!-- Spinner Form Part -->
+				<div class="form_container" id="spinner">
+					<form id="loginForm_spinner" action="/" novalidate
+						aria-describedby="spinner" autocomplete="off">
+						<div class="form_header">
+							<img
+								src="/embedded-login/images/pic-header-mathworks-logo.svg"
+								class="mw_logo" alt="MathWorks" width="167" height="34">
+						</div>
+						<div class="form_body">
+							<h1 class="add_margin_30" id="spinnerText"></h1>
+							<div class="form-group d-flex justify-content-center">
+								<mw-progress-indicator type="spinner" size="xlarge"></mw-progress-indicator>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!-- end spinner form part -->
+				</div>
+			 </div>
+		   </div>
+		</div>
+	  </div>
+	</main>
+	</div>
+	<footer>
+		<div class="primary_footer" id="primary_footer">
+			<div class="container-fluid container-lg">
+				<div class="row align-items-start">
+					<div class="col-12 col-md-9">
+						<nav>
+							<ul class="list-inline" id="footernav">
+								<li class="list-inline-item"><a	href="https://www.mathworks.com/mw_account/frequently-asked-questions.html" id="faq">Trust Center</a></li>
+								<li class="list-inline-item"><a	href="https://www.mathworks.com/company/aboutus/policies_statements/trademarks.html" id="trademarks">Trademarks</a></li>
+								<li class="list-inline-item"><a	href="https://www.mathworks.com/company/aboutus/policies_statements/patents.html" id="patents">Privacy Policy</a></li>
+								<li class="list-inline-item"><a	href="https://www.mathworks.com/company/aboutus/policies_statements/piracy.html" id="piracy">Preventing Piracy</a></li>
+								<li class="list-inline-item"><a	href="https://status.mathworks.com/" id="status">Application Status</a></li>
+							</ul>
+						</nav>
+						<p class="copyright">&copy; 1994-2022 The MathWorks, Inc.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
